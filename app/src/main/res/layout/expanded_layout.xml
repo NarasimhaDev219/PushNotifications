@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="256dp">
+
+
+    <ImageView
+        android:id="@+id/imgCookies"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:src="@drawable/cookie"/>
+
+    <TextView
+        android:id="@+id/tvNumberOfCookies"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_weight="3"
+        android:textStyle="bold"
+        android:paddingVertical="10dp"
+        android:layout_gravity="center"
+        android:text="You Successfully bought 10 Cookies!"/>
+
+
+</LinearLayout>
