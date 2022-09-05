@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
         //for unsubscribing small_discount part from firebase console
         //FirebaseMessaging.getInstance().unsubscribeFromTopic("small_discount")
 
-
         //Create Notification channel if Device is using  API 26+
         createNotificationChannel()
 
@@ -46,10 +45,10 @@ class MainActivity : AppCompatActivity() {
                 PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
 
             //Layouts for creating custom notifications
-           /* val collapsedLayout = RemoteViews(packageName,R.layout.collapsed_layout)
+            val collapsedLayout = RemoteViews(packageName,R.layout.collapsed_layout)
             val expandedLayout = RemoteViews(packageName,R.layout.expanded_layout)
             expandedLayout.setImageViewResource(R.id.imgCookies,R.drawable.cookie)
-            expandedLayout.setTextViewText(R.id.tvNumberOfCookies,"You successfully bought $cookies Cookies")*/
+            expandedLayout.setTextViewText(R.id.tvNumberOfCookies,"You successfully bought $cookies Cookies")
 
             val bitmap = BitmapFactory.decodeResource(resources, R.drawable.cookie)
 
@@ -60,9 +59,9 @@ class MainActivity : AppCompatActivity() {
                 CHENNELID
             )
                 .setSmallIcon(R.drawable.ic_chat)
-                /*.setCustomContentView(collapsedLayout)
+                .setCustomContentView(collapsedLayout)
                 .setCustomBigContentView(expandedLayout)
-                .setStyle(NotificationCompat.DecoratedCustomViewStyle())*/
+                .setStyle(NotificationCompat.DecoratedCustomViewStyle())
                 .setContentIntent(pendigIntent)
                 .setContentTitle("Cookies")
                 .setContentText("You just bought $cookies Cookies!")
